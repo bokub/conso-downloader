@@ -137,7 +137,7 @@
         currentDate.setDate(currentDate.getDate() - 7);
         requestCount++;
       } catch (e) {
-        console.error(`❌ Erreur pour ${dateStr}:`, e.message);
+        console.log(`❌ Erreur pour ${dateStr}:`, e.message);
         break;
       }
     }
@@ -174,9 +174,9 @@
   function downloadCSV(data) {
     data.sort((a, b) => new Date(a.dateDebut) - new Date(b.dateDebut));
 
-    let csv = 'debut,fin,kW\n';
+    let csv = 'debut;fin;kW\n';
     data.forEach((row) => {
-      csv += `${row.dateDebut},${row.dateFin},${row.valeur}\n`;
+      csv += `${row.dateDebut};${row.dateFin};"${row.valeur.toString().replace('.', ',')}"\n`;
     });
 
     const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });

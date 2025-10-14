@@ -19,7 +19,7 @@ Le site d’Enedis ne permet pas de récupérer facilement vos données historiq
 
 ## 🧩 Détails techniques
 
-- Le fichier téléchargé est au format **CSV**, compatible avec Excel, LibreOffice, Google Sheets, etc...
+- Le fichier téléchargé est au format **CSV**, avec un séparateur point-virgule (`;`) et un séparateur décimal virgule (`,`)
 - L’extension n’envoie **aucune donnée vers un service externe** : tout se passe directement dans votre navigateur
 
 ---
