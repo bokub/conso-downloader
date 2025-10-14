@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Conso Downloader",
+  "version": "1.0.0",
+  "description": "Téléchargez vos données Enedis en un clic",
+  "permissions": ["webRequest"],
+  "host_permissions": [
+    "https://frontend-mes-mesures-prm-cloud.enedis.fr/*",
+    "https://mon-compte-particulier.enedis.fr/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://frontend-mes-mesures-prm-cloud.enedis.fr/*"],
+      "js": ["downloader.js"],
+      "run_at": "document_start",
+      "all_frames": true,
+      "world": "MAIN"
+    }
+  ],
+  "icons": {
+    "128": "images/zap.png"
+  }
+}
