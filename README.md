@@ -1,23 +1,27 @@
 # Conso Downloader
 
-> Téléchargez vos données Enedis en un clic
+[![Chrome users](https://flat.badgen.net/chrome-web-store/users/geldaniiglcfekimaghpdiiabjaflllp?label=chrome%20users&color=green)](https://chromewebstore.google.com/detail/conso-downloader/geldaniiglcfekimaghpdiiabjaflllp)
 
-## 🚀 À quoi sert cette extension ?
+> Téléchargez vos données Linky en un clic
 
-Le site d’Enedis ne permet pas de récupérer facilement vos données historiques, notamment votre consommation **par demi-heure** : il faut le faire **semaine par semaine**, ce qui est très fastidieux
+## À quoi ça sert
 
-**Conso Downloader** ajoute simplement la fonctionnalité manquante : un bouton pour **télécharger tout votre historique de consommation en une seule fois**, au format CSV
+**Conso Downloader** est une extension pour Google Chrome vous permettant de **télécharger tout votre historique de consommation électrique par demi-heure**, au format CSV, en un seul clic.
 
-## ⚙️ Comment l'utiliser
+En effet, le site d’Enedis ne permet pas de récupérer l'intégralité de vos données, il faut le faire **semaine par semaine**, ce qui rend la tâche longue et fastidieuse.
 
-1. Installez l’extension depuis le Chrome Web Store **(en attente de validation)**
+## Comment l'utiliser
+
+<img align="right" src="https://github.com/user-attachments/assets/d66e5bfb-0c75-4c31-a5af-cca17f4961c7" width="200"/>
+
+1. Installez l’extension depuis le [Chrome Web Store](https://chromewebstore.google.com/detail/conso-downloader/geldaniiglcfekimaghpdiiabjaflllp)
 2. Rendez-vous sur votre espace client Enedis, dans la section [Suivre ma consommation](https://mon-compte-particulier.enedis.fr/visualiser-vos-mesures-consommation)
 3. Un **nouveau bouton gris** apparaît en bas à gauche de la page avec le texte **Télécharger tout mon historique**
 4. Sélectionnez l’option **Heures**, puis cliquez sur **Visualiser** pour afficher vos données horaires
 5. Une fois les données horaires affichées, le bouton devient **bleu** et cliquable
 6. Cliquez dessus, patientez quelques secondes : **votre fichier CSV** contenant tout votre historique sera téléchargé automatiquement
 
-## 🧩 Détails techniques
+## Détails techniques
 
 - Le fichier téléchargé est au format **CSV**, avec un séparateur point-virgule (`;`) et un séparateur décimal virgule (`,`)
 - L’extension n’envoie **aucune donnée vers un service externe** : tout se passe directement dans votre navigateur
