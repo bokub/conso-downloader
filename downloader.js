@@ -1,10 +1,11 @@
 (function () {
   'use strict';
 
-  const PATTERN = /donnees-energetiques\?mesuresTypeCode=COURBE&mesuresCorrigees=false&typeDonnees=CONS/;
+  const PATTERN = /donnees-energetiques\?mesuresTypeCode=COURBE&mesuresCorrigees=false&typeDonnees=(CONS|PROD)/;
   const MAX_DOWNLOADS = 150;
 
   let capturedUrl = null;
+  let isProd = null;
   let downloadButton = null;
   let isDownloading = false;
 
@@ -124,7 +125,8 @@
         urlObj.searchParams.set('dateDebut', dateStr);
 
         const response = await fetchData(urlObj.toString());
-        const data = response?.cons?.aggregats?.heure?.donnees || [];
+        const root = isProd ? response?.prod : response?.cons;
+        const data = root?.aggregats?.heure?.donnees || [];
 
         console.log(`📅 ${dateStr}: ${data.length} enregistrements`);
 
@@ -185,7 +187,7 @@
     link.href = url;
 
     const prmMatch = capturedUrl.match(/prms\/(\d+)/);
-    link.download = `historique_conso_${prmMatch[1]}_${new Date().toISOString().split('T')[0]}.csv`;
+    link.download = `historique_${isProd ? 'prod' : 'conso'}_${prmMatch[1]}_${new Date().toISOString().split('T')[0]}.csv`;
 
     document.body.appendChild(link);
     link.click();
@@ -201,9 +203,12 @@
     const [url] = args;
     const urlStr = typeof url === 'string' ? url : url.url;
 
-    if (PATTERN.test(urlStr)) {
+    const matches = PATTERN.exec(urlStr);
+    if (matches) {
       capturedUrl = urlStr;
-      console.log('✅ URL capturée');
+      isProd = matches[1] === 'PROD';
+
+      console.log(`✅ URL capturée - mode ${isProd ? 'production' : 'consommation'}`);
       enableButton();
     }
 
