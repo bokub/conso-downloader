@@ -15,10 +15,10 @@ En effet, le site d’Enedis ne permet pas de récupérer l'intégralité de vos
 <img align="right" src="https://github.com/user-attachments/assets/d66e5bfb-0c75-4c31-a5af-cca17f4961c7" width="200"/>
 
 1. Installez l’extension depuis le [Chrome Web Store](https://chromewebstore.google.com/detail/conso-downloader/geldaniiglcfekimaghpdiiabjaflllp)
-2. Rendez-vous sur votre espace client Enedis, dans la section [Suivre ma consommation](https://mon-compte-particulier.enedis.fr/visualiser-vos-mesures-consommation)
+2. Rendez-vous sur votre espace client Enedis, dans la section [Suivre ma consommation](https://mon-compte-particulier.enedis.fr/visualiser-vos-mesures-consommation) (ou production)
 3. Un **nouveau bouton gris** apparaît en bas à gauche de la page avec le texte **Télécharger tout mon historique**
-4. Sélectionnez l’option **Heures**, puis cliquez sur **Visualiser** pour afficher vos données horaires
-5. Une fois les données horaires affichées, le bouton devient **bleu** et cliquable
+4. Sélectionnez l’option **Courbe de charge (kW)** dans le sélecteur à droite de la période
+5. Le bouton devient alors **bleu** et cliquable
 6. Cliquez dessus, patientez quelques secondes : **votre fichier CSV** contenant tout votre historique sera téléchargé automatiquement
 
 ## Détails techniques
