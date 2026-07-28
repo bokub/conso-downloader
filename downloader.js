@@ -16,7 +16,7 @@
       return;
     }
 
-    const form = document.querySelector('app-filtres form');
+    const form = document.querySelector('filtres form');
     if (!form) {
       console.log('⏳ Attente formulaire...');
       setTimeout(createDownloadButton, 2000);
